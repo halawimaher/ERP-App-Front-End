@@ -4,7 +4,7 @@ import { Avatar, Title, Caption, Paragraph, Drawer, Text, TouchableRipple, Switc
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
 import { Ionicons } from '@expo/vector-icons';
 
-export function DrawerContent(props) {
+export function DrawerContent({props}) {
 
      const [isDarkTheme, setIsDarkTheme] = React.useState(false)
 

@@ -1,11 +1,12 @@
 import React from 'react'
-import { Button, TextInput, TouchableOpacity, FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { TextInput, TouchableOpacity, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 
 
 function LogIn({navigation}) {
 
         return (
-<View style={styles.container}>
+          <SafeAreaView style={styles.container}>
+<View>
       <Text style={styles.titleText}>MnM Software Inc</Text>
         <TextInput
         autoCapitalize = 'none'
@@ -29,12 +30,13 @@ function LogIn({navigation}) {
        </TouchableOpacity>
        <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("All Employees")}
+          // onPress={() => navigation.navigate("All Employees")}
        >
          <Text style={styles.buttonText}> Register </Text>
        </TouchableOpacity>
         
       </View>
+      </SafeAreaView>
     );
   }
 
