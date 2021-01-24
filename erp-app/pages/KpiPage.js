@@ -7,8 +7,8 @@ function KpiPage({navigation}) {
         return (
            <View style={styles.container}>
              <Text>Kpi Page</Text>
-             <Button style={styles.button} title="Back Home" onPress={() => navigation.navigate("All Employees")} />
-             {/* <Button style={styles.button} title="Back" onPress={() => navigation.goBack()} /> */}
+             <Button style={styles.button} title="Back to Dashboard" onPress={() => navigation.navigate("Dashboard")} />
+             <Button style={styles.button} title="Previous Page" onPress={() => navigation.goBack()} />
           </View>
         );
       }

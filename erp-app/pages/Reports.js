@@ -11,8 +11,8 @@ function Reports({navigation}) {
              <Text>Reports</Text>
              {/* <OverallKpi /> */}
              <EmployeeProjects />
-             <Button style={styles.button} title="Back Home" onPress={() => navigation.replace("All Employees")} />
-             <Button style={styles.button} title="Back" onPress={() => navigation.goBack()} />
+             <Button style={styles.button} title="Back to Dashboard" onPress={() => navigation.navigate("Dashboard")} />
+             <Button style={styles.button} title="Previous Page" onPress={() => navigation.goBack()} />
           </View>
         );
       }

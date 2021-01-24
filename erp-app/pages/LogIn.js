@@ -1,5 +1,7 @@
 import React from 'react'
 import { TextInput, TouchableOpacity, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import AllEmployees from './AllEmployees'
+import Reports from './Reports'
 
 
 function LogIn({navigation}) {

@@ -10,6 +10,7 @@ import EmployeeProfile from './pages/EmployeeProfile';
 import KpiPage from './pages/KpiPage'
 import Reports from './pages/Reports'
 import { Ionicons } from '@expo/vector-icons';
+import Dashboard from './pages/Dashboard'
 
 
 const LoginStack = createStackNavigator();
@@ -18,7 +19,7 @@ const LoginStack = createStackNavigator();
 // const ProfileStack = createStackNavigator();
 // const KpiStack = createStackNavigator();
 // const ReportsStack = createStackNavigator();
-// const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
 const LoginStackScreen = ({navigation}) => (
   <LoginStack.Navigator initialRouteName="Login" screenOptions={{
@@ -38,8 +39,8 @@ const LoginStackScreen = ({navigation}) => (
   )
 
   const RootStack = createStackNavigator();
-const RootStackScreen = ({navigation}) => (
-<RootStack.Navigator initialRouteName="All Employees" screenOptions={{
+const RootStackScreen = () => (
+<RootStack.Navigator initialRouteName="Dashboard" screenOptions={{
           headerStyle:{
           backgroundColor: '#009387',
         },
@@ -48,11 +49,15 @@ const RootStackScreen = ({navigation}) => (
             fontWeight: 'bold',
           }
         }}>
+          <RootStack.Screen name="Dashboard" component={Dashboard} options={{
+            title: 'Dashboard',
+            // headerLeft: ({navigation}) => (
+            //   <Ionicons name="menu" size={25} backgroundColor="#009387" onPress ={() => navigation.openDrawer()} ></Ionicons>
+              
+            // )
+          }} />
           <RootStack.Screen name="All Employees" component={AllEmployees} options={{
             title: 'All Employees',
-            headerLeft: () => (
-              <Ionicons name="menu" size={25} backgroundColor="#009387" onPress ={() => navigation.openDrawer()}></Ionicons>
-            )
           }} />
             <RootStack.Screen name="Profile" component={EmployeeProfile} options={{
             title: 'Profile',
@@ -69,7 +74,7 @@ const RootStackScreen = ({navigation}) => (
 
 function App() {
 
-  const [token, setToken] = useState("dbjkadas");
+  const [token, setToken] = useState("dshjdsada");
 
   SecureStore.setItemAsync("token", "token");
 
